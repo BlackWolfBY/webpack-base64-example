@@ -4,6 +4,8 @@ const path = require("path");
 const HtmlWebpackPlugin = require("html-webpack-plugin");
 const MiniCssExtractPlugin = require("mini-css-extract-plugin");
 const HtmlInlineScriptPlugin = require("html-inline-script-webpack-plugin");
+const HTMLInlineCSSWebpackPlugin =
+  require("html-inline-css-webpack-plugin").default;
 
 const isProduction = process.env.NODE_ENV == "production";
 
@@ -24,8 +26,8 @@ const config = {
       template: "public/index.html",
     }),
     new HtmlInlineScriptPlugin(),
-
     new MiniCssExtractPlugin(),
+    new HTMLInlineCSSWebpackPlugin(),
 
     // Add your plugins here
     // Learn more about plugins from https://webpack.js.org/configuration/plugins/
