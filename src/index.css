@@ -1,0 +1,10 @@
+#app {
+  width: 200px;
+  background: red;
+}
+
+#img {
+  background: url("./windows11.jpg");
+  width: 100%;
+  height: 500px;
+}
